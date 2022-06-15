@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #nav{
+            width:100%;
+            height:110px;
+            margin-bottom: 40px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        #upper{
+            height: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       #upper>div:first-child{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: 25px;
+       }
+       #upper>div:first-child>input{
+        height: 25px;
+        width: 300px;
+        margin-left: 20px;
+       }
+       #upper>div:first-child>img{
+        height: 90%;
+       }
+       #upper>div:last-child{
+        display: flex;
+       }
+       #upper>div:last-child>div>div:first-child{
+        display: flex;
+        font-size: 14px;
+        justify-content:right;
+       }
+       #upper>div:last-child>div>div:last-child{
+        font-weight: 600;
+        justify-content:right;
+       }
+       #upper>div:last-child>div{
+        margin-right: 20px;
+       }
+       #upper>div:last-child>div:last-child>img{
+        width: 35px;
+        margin-right: 10px;
+       }
+       #lower{
+        font-size: 12px;
+        display: flex;
+        margin-top: 16px;
+        gap:27px;
+        margin-left: 110px;
+       }
+       #lower>select{
+        border: none;
+        font-weight: 700;
+       }
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #slide{
+            width:99%;
+            margin:auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        #slide>img{
+            width:100%;
+        }
+        #slide>button{
+            position: absolute;
+            top:45%;
+            font-size: 25px;
+            border: none;
+            background-color: transparent;
+            color: rgb(210, 210, 210);
+            padding: 3px;
+        }
+        #slide>button:nth-child(2){
+            left:1%;
+        }
+        #slide>button:nth-child(3){
+            right:1%;
+        }
+        #slide>button:hover{
+            color:white;
+            cursor: pointer;
+        }
+        
+        .head{
+            width: 95%;
+            margin: auto;
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head>hr{
+            width: 75%;
+            height: 1px;
+            margin: auto;
+            background-color: rgb(109, 109, 109);
+        }
+        .head>p:last-child{
+            color: gray;
+        }
+        #fastMovingSlide{
+            width:98%;
+            margin: auto;
+            margin-top: 10px;
+            display: grid;
+            gap:20px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1;
+        }
+        #fastMovingSlide img{
+            width:100%;
+        }
+        #fastMovingSlide>div>p:nth-child(2){
+            font-size: 14px;
+            font-weight: 450;
+            color: rgb(121, 121, 121);
+        }
+        #fastMovingSlide>div>.stars{
+            background-color: rgb(3, 186, 3);
+            padding: 2px 4px;
+            color: white;
+            width:19%;
+            margin-bottom: 2px;
+            font-size:11px;
+            font-weight: 600;
+            border-radius: 5px;
+            text-align: center;
+            float: right;
+        }
+        #fastMovingSlide hr{
+            margin-top: 24px;
+            background-color: rgb(237, 237, 237);
+            border-color: transparent;
+        }
+        .price{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price>p:first-child{
+            color: rgb(255, 166, 1);
+            font-size: large;
+            font-weight: 600;
+        }
+        .price>p:last-child{
+            font-size:13px;
+            color: rgb(3, 186, 3);
+            font-weight: 500;
+        }
+        #fastMovingSlide>div{
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="upper">
+            <div>
+                <img src="https://d64lkarmo2mrq.cloudfront.net/baselogo.png" alt="logo">
+                <input type="text" placeholder="Search">
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <p>LOGIN</p>
+                        <p>/</p>
+                        <p>SIGNUP</p>
+                    </div>
+                    <div>
+                        <p>WELCOME GUEST</p>
+                    </div>
+                </div>
+                 <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/211/211170.png" alt="cart">
+                </div>
+             </div>
+        </div>
+        <div id="lower">
+            <select id="dropdown">
+                <option value="category">Select Category</option>
+                <option value="mens">Mens</option>
+                <option value="womens">Womens</option>
+            </select>
+            <p>Flash Sale</p>
+            <p>Best Deals</p>
+            <p>Shop By Brand</p>
+            <p>Trending</p>
+            <p>New Arrivals</p>
+        </div>
+    </div>
+    <div id="slide">
+        <img src="https://d64lkarmo2mrq.cloudfront.net/img/home/fathersdaybanner.webp" alt="">
+        <button><</button>
+        <button>></button>
+    </div>
+    <div id="fastMoving">
+        <div class="head">
+            <h3>Fast moving products</h3>
+            <hr>
+            <p>view more</p>
+        </div>
+        <div id="fastMovingSlide">
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyNjMxXC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+                <p>Mens Spining Wheel Watch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg0L0dvbGRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=" alt="">
+                <p>Womens ZX19 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg1L0JsYWNrX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>KOSPET Tank M1 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODQ0L0dyZWVuX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>Bag Ceramic Coffee Cup with Spoon</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div id="fastMoving">
+        <div class="head">
+            <h3>Fast moving products</h3>
+            <hr>
+            <p>view more</p>
+        </div>
+        <div id="fastMovingSlide">
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyNjMxXC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+                <p>Mens Spining Wheel Watch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg0L0dvbGRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=" alt="">
+                <p>Womens ZX19 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg1L0JsYWNrX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>KOSPET Tank M1 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODQ0L0dyZWVuX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>Bag Ceramic Coffee Cup with Spoon</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div id="fastMoving">
+        <div class="head">
+            <h3>Fast moving products</h3>
+            <hr>
+            <p>view more</p>
+        </div>
+        <div id="fastMovingSlide">
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyNjMxXC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+                <p>Mens Spining Wheel Watch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg0L0dvbGRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=" alt="">
+                <p>Womens ZX19 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg1L0JsYWNrX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>KOSPET Tank M1 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODQ0L0dyZWVuX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>Bag Ceramic Coffee Cup with Spoon</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div id="fastMoving">
+        <div class="head">
+            <h3>Fast moving products</h3>
+            <hr>
+            <p>view more</p>
+        </div>
+        <div id="fastMovingSlide">
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyNjMxXC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+                <p>Mens Spining Wheel Watch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg0L0dvbGRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=" alt="">
+                <p>Womens ZX19 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg1L0JsYWNrX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>KOSPET Tank M1 Smartwatch</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODQ0L0dyZWVuX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19" alt="">
+                <p>Bag Ceramic Coffee Cup with Spoon</p>
+                <p class="stars">3.6/5 &starf;</p>
+                <hr>
+                <div class="price">
+                    <p>₹9,499</p>
+                    <p>UPTO 37% OFF</p>
+                </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+<script>
+    let slideImg=[
+    "https://d64lkarmo2mrq.cloudfront.net/img/home/fathersdaybanner.webp",
+    "https://d64lkarmo2mrq.cloudfront.net/img/home/flash-sale-banner-01.webp",
+    "https://d64lkarmo2mrq.cloudfront.net/img/home/bluetooth2022.webp",
+    "https://d64lkarmo2mrq.cloudfront.net/img/home/womenswatches2022.webp",
+    "https://d64lkarmo2mrq.cloudfront.net/img/home/nordic2022.webp",
+    ];
+    let img=document.querySelector("#slide>img");
+    let currentImg=0;
+    let buttons=document.querySelectorAll("#slide>button");
+    buttons[0].addEventListener("click",function(){
+        if (currentImg==0){
+            currentImg= slideImg.length-1;
+        }
+        else{
+            currentImg--;
+        }
+        img.src=slideImg[currentImg];
+    })
+    buttons[1].addEventListener("click",function(){
+        if (currentImg==slideImg.length-1){
+            currentImg=0;
+        }
+        else{
+            currentImg++;
+        }
+        img.src=slideImg[currentImg];
+    })
+
+
+</script>
