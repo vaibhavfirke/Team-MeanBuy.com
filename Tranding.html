@@ -6,6 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #nav{
+            width:100%;
+            height:110px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        #upper{
+            height: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       #upper>div:first-child{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: 25px;
+       }
+       #upper>div:first-child>input{
+        height: 25px;
+        width: 300px;
+        margin-left: 20px;
+       }
+       #upper>div:first-child>img{
+        height: 90%;
+       }
+       #upper>div:last-child{
+        display: flex;
+       }
+       #upper>div:last-child>div>div:first-child{
+        display: flex;
+        font-size: 14px;
+        justify-content:right;
+       }
+       #upper>div:last-child>div>div:last-child{
+        font-weight: 600;
+        justify-content:right;
+       }
+       #upper>div:last-child>div{
+        margin-right: 20px;
+       }
+       #upper>div:last-child>div:last-child>img{
+        width: 35px;
+        margin-right: 10px;
+       }
+       #lower{
+        font-size: 12px;
+        display: flex;
+        margin-top: 16px;
+        gap:27px;
+        margin-left: 110px;
+       }
+       #lower>select{
+        border: none;
+        font-weight: 700;
+       }
+    
         #trandingbox{
             display: flex;
             justify-content: space-around;
@@ -21,7 +82,7 @@ margin-top: 25px;
 display: grid;
             grid-template-columns: repeat(3,295px);
             grid-template-rows: auto;
-            gap: 10px 20px;
+            gap: 30px 20px;
            
 
 
@@ -35,7 +96,7 @@ margin-bottom: 25px;
         }
         #subcategories{
             border-right: 0.1px  solid rgb(230, 232, 233);
-           width:16%;
+           width:15%;
         }
         #subcategories>p:first-child{
 color: black;
@@ -51,34 +112,82 @@ padding-top: 25px;
        #prceandoffer{
          display: flex;
          justify-content: center;
-         align-items: center;
+       
          justify-content: space-between;
-        
+        margin-top: 44px;
+        text-align: center;
+        margin-bottom: 5px;
+        font-weight: 600;
         }
         
         #nameandrating>p+p{
           color: white;
-          background-color: rgb(48, 180, 48);
-          display: flex;
-       justify-content: center;
-        
-          width: 60px;
+          background-color: rgb(3, 186, 3);
+          width: 19%;
+          padding: 2px 4px;
           height: 20px;
           border-radius: 5px;
+          font-size:11px;
+         margin-top: 5px;
+          text-align: center;
+          float: right;
          
         }
         #prceandoffer>p+p{
           color:rgb(48, 180, 48) ;
-          font-size: 17px;
+          font-size: 13px;
+          font-weight: 500;
         }
         #prceandoffer>p{
           color: orange;
           font-size: 20px;
         }
+        #nameandrating>p{
+         color: rgb(121, 121, 121);
+       margin-top: 3px;
+     
+        }
 
     </style>
 </head>
 <body>
+  
+    <div id="nav">
+    <div id="upper">
+        <div>
+            <img src="https://d64lkarmo2mrq.cloudfront.net/baselogo.png" alt="logo">
+            <input type="text" placeholder="Search">
+        </div>
+        <div>
+            <div>
+                <div>
+                    <p>LOGIN</p>
+                    <p>/</p>
+                    <p>SIGNUP</p>
+                </div>
+                <div>
+                    <p>WELCOME GUEST</p>
+                </div>
+            </div>
+             <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/211/211170.png" alt="cart">
+            </div>
+         </div>
+    </div>
+    <div id="lower">
+        <select id="dropdown">
+            <option value="category">Select Category</option>
+            <option value="mens">Mens</option>
+            <option value="womens">Womens</option>
+        </select>
+        <p>Flash Sale</p>
+        <p>Best Deals</p>
+        <p>Shop By Brand</p>
+        <p>Trending</p>
+        <p>New Arrivals</p>
+    </div>
+</div>
+
     <div id="trandingbox">
 <div id="subcategories">
 <p>Subcategories</p>
@@ -117,7 +226,7 @@ let product=[
     name: "Dual Movt Quartz Wristwatch",
     price: "₹1,899",
     size: "",
-    rating:"4.6/5",
+    rating:"4.6/5 ★",
     offer:"UP TO 24% OFF",
     productID:"Mens watch",
     catagory: "Mens Watches",
@@ -125,10 +234,10 @@ let product=[
   },
   {
     brand:"",
-    name:"Dual Wirelass Mini Bluetooth Earbuds With Charging Bin",
+    name:"Dual Wirelass Mini Bluetooth Earbuds ",
     price:"₹1,899",
     size:"",
-    rating:"4.5/5",
+    rating:"4.5/5 ★",
     offer:"UP TO 53% OFF",
     productID:"Earbuds",
     catagory:"Bluetooth Earphone",
@@ -140,7 +249,7 @@ let product=[
     name:"Remote control Aircraft MIG 530",
     price:"₹3,499",
     size:"",
-    rating:"4.5/5",
+    rating:"4.5/5 ★",
     offer:"UP TO 30% OFF ",
     productID:"Remote Contral Aircraft",
     catagory:"Aircraft",
@@ -152,7 +261,7 @@ let product=[
     name:"Mens LED Digital Wristwatch",
     price:"₹2,999",
     size:"",
-    rating:"4.6/5",
+    rating:"4.6/5 ★",
     offer:"UP TO 33% OFF",
     productID:"",
     catagory:"Digital Watches",
@@ -164,7 +273,7 @@ let product=[
     name:"Women ZX19 SmartWatch",
     price:"₹2,999",
     size:"",
-    rating:"4.5/5",
+    rating:"4.5/5 ★",
     offer:"UP TO 25% OFF",
     productID:"Women Watch",
     catagory:"Women Watches",
@@ -176,7 +285,7 @@ let product=[
     name:"Mens Luxury Analog Wristwatch",
     price:"₹2,599",
     size:"",
-    rating:"3.8/5",
+    rating:"3.8/5 ★",
     offer:"UP TO 42% OFF",
     productID:"Mens Watch",
     catagory:"Mens Watches",
@@ -188,7 +297,7 @@ let product=[
     name:"Mens Digital SmartWatch",
     price:"₹2,999",
     size:"",
-    rating:"4.8/5",
+    rating:"4.8/5 ★",
     offer:"UP YO 19% OFF",
     productID:"Watch",
     catagory:"Digital Watches",
@@ -200,7 +309,7 @@ let product=[
     name:"TWS 6D Stereo Earphones",
     price:"₹1,999",
     size:"",
-    rating:"4.6/5",
+    rating:"4.6/5 ★",
     offer:"UP TO 33% OFF",
     productID:"",
     catagory:"Bluetooth Earphone",
@@ -212,7 +321,7 @@ let product=[
     name:"Retro V neck Casual Tops",
     price:"₹1,399",
     size:"",
-    rating:"3.7/5",
+    rating:"3.7/5 ★",
     offer:"U TO 39% OFF",
     productID:"Casual",
     catagory:"Casual",
@@ -224,7 +333,7 @@ let product=[
     name:"Qi Wirless Charger ",
     price:"₹3,199",
     size:"",
-    rating:"4.6/5",
+    rating:"4.6/5 ★",
     offer:"UP TO 29% OFF",
     productID:"",
     catagory:"Wirless charger",
@@ -236,7 +345,7 @@ let product=[
     name:"Haylou GT 1 Tuch Bluetooth",
     price:"₹2,499",
     size:"",
-    rating:"4.6/5",
+    rating:"4.6/5 ★;",
     offer:"UP TO 38% OFF",
     productID:"Bluetooth Earphone",
     catagory:"Bluetooth Earphone",
@@ -248,7 +357,7 @@ let product=[
     name:"TWS LT04 Smart Watch",
     price:"₹4799",
     size:"",
-    rating:"4.7/5",
+    rating:"4.7/5 ★",
     offer:"UP TO 31% OFF",
     productID:"Digital Watches",
     catagory:"Digital Watches",
@@ -260,7 +369,7 @@ let product=[
     name:"Tws Touch Earbuds",
     price:"₹1,899",
     size:"",
-    rating:"4.7/5",
+    rating:"4.7/5★",
     offer:"UP TO 27% OFF",
     productID:"Bluetooth Earbuds",
     catagory:"Bluetooth Earbuds",
@@ -272,7 +381,7 @@ let product=[
     name:"Mens Skuil Watch",
     price:"₹2,699",
     size:"",
-    rating:"4.5/5",
+    rating:"4.5/5★",
     offer:"UP TO 33% OFF",
     productID:"Mens Watch",
     catagory:"Mens Watches",
@@ -284,7 +393,7 @@ let product=[
     name:"3D Art Sand Hour Glass",
     price:"₹1,499",
     size:"",
-    rating:"4.9/5",
+    rating:"4.9/5★",
     offer:"UP YO 50% OFF",
     productID:"",
     catagory:"Home decore",
@@ -296,7 +405,7 @@ let product=[
     name:"I7s TWSWirless Blutooth Earphone With Charging Box",
     price:"₹799",
     size:"",
-    rating:"5.0/5",
+    rating:"5.0/5 ★",
     offer:"UPTO 47% OFF",
     productID:"",
     catagory:"Bluetooth Earphones",
@@ -308,7 +417,7 @@ let product=[
     name:"Lether Sport Quartz Watch",
     price:"₹2,199",
     size:"",
-    rating:"4.9/5",
+    rating:"4.9/5★",
     offer:"UP TO 21% OFF",
     productID:"",
     catagory:"Mens Watches",
@@ -320,7 +429,7 @@ let product=[
     name:"KOSPET TANK M1 Smartwatch",
     price:"₹4,499",
     size:"",
-    rating:"4.1/5",
+    rating:"4.1/5 ★;",
     offer:"UP TO 44% OFF",
     productID:"",
     catagory:"Mens Watches",
@@ -332,7 +441,7 @@ let product=[
     name:"Waterproof Smart Watch",
     price:"₹2,399",
     size:"",
-    rating:"4.4/5",
+    rating:"4.4/5★;",
     offer:"UP TO 29% OFF",
     productID:"",
     catagory:"Mens Watches",
@@ -344,7 +453,7 @@ let product=[
  let products=document.getElementById("products")
 
 function displayproducts(data){
-    console.log(data);
+  
     data.forEach(function (element){
         let product=document.createElement("div");
 let img=document.createElement("img")
@@ -358,7 +467,8 @@ prodname.innerText=element.name;
 
 let rating=document.createElement("p")
 rating.innerText=element.rating; 
-
+let line=document.createElement("hr");
+line.id="line";
 let div2=document.createElement("div");
 div2.id="prceandoffer";
 
