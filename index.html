@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            cursor: pointer;
+        }
+        #heading{
+            /* border: 1px solid red; */
+            width: 99%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            /* margin-top: 10px; */
+        }
+        #heading>div:last-child{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 35%;
+            display: flex;
+        }
+        #heading>div:first-child{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 20%;
+        }
+        #heading>div:first-child>a>img{
+            width: 70%;
+            height: 70%;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+        #heading>div:last-child>div{
+            /* border: 1px solid black; */
+            height: 100%;
+            width: 80%;
+            text-align: center;
+        }
+        #heading>div:last-child>div:last-child{
+            width: 15%;
+        }
+        #heading>div:last-child>div:first-child{
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        #cartimage>img{
+            width: 60%;
+            height: 40%;
+            padding-top: 15px;
+            padding-right: 20px;
+        }
+       
+        #heading2{
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            color: rgb(69,90,100);
+        }
+        #heading2>button>a{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            padding: 2px;
+            text-decoration: none;
+        }
+        #heading2>button{
+            background-color: black;
+            border-radius: 5px;
+
+        }
+        #signup{
+            display: flex;
+            flex-direction: column;
+        }
+        #signup>div{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+       #signup>div:first-child{
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+       }
+       #signup>div:first-child>a{
+        text-decoration: none;
+        color: rgb(71,71,71);
+        
+       }
+       #signup>div:nth-child(2){
+        font-weight: bold;
+        color:rgb(71,71,71);
+        font-size: 15px;
+       }
+
+
+        
+        #cartImage>img{
+            width: 100%;
+            height: 100%;
+        }
+       
+        #line{
+            border: 1px solid rgb(247,148,29);
+
+        }
+        
+        button>img{
+            height:100%;
+        }
+        #container{
+            /* border: 1px solid grey; */
+            /* width: 99%; */
+            /* height: 500px; */
+            margin-top: 20px;
+            display: flex;
+            justify-content:space-between;
+        }
+        #container>div:first-child>h3{
+            color: rgb(247,148,29);
+            margin-left: 10px;
+        }
+        #container>div:first-child{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        #container>div:last-child{
+            border: 1px solid grey;
+            width: 30%;
+            height: 280px;
+            margin-right: 50px;
+            margin-top: 15px;
+        }
+        
+
+        #container>div:first-child>form{
+            /* border: 1px solid red; */
+            /* height: 400px; */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        #container>div:first-child>div{
+            /* display: flex; */
+        }
+       #button{
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+       }
+       #button>button:first-child{
+        background-color: rgb(75,104,185);
+        color: white;
+        width: 46%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-color: transparent;
+       }
+       #button>button:last-child{
+        background-color: rgb(66,133,244);
+        color: white;
+        width: 46%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-color: transparent;
+       }
+       
+        input,
+        select {
+        display: block;
+        margin: 15px 0px;
+        font-size: 15px;
+        padding: 2%;
+        }
+        form {
+        width: 400px;
+        /* border: 1px solid rgb(230, 230, 230); */
+        /* margin: 3%; */
+        padding: 1%;
+        background: white;
+        }
+        form>button{
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            background-color: rgb(247,148,29);
+            color: white;
+            margin-bottom: 20px;
+            border: none;
+        }
+       p{
+        text-align: center;
+       }
+       #cart{
+        /* border: 1px solid black; */
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(69,90,100);
+
+       }
+       #cart+div{
+        border: 1px solid grey;
+        padding-left: 20px;
+        height: 60px;
+        padding-top: 15px;
+        border-left: none;
+        border-right: none;
+        border-bottom: inset;
+        color: rgb(69,90,100);
+
+       }
+       #cart+div+div{
+        /* border: 1px solid grey; */
+        padding-left: 20px;
+        /* height: 60px; */
+        padding-top: 15px;
+        padding-bottom: 30px;
+        color: rgb(69,90,100);
+
+       }
+       #cart+div+div>button{
+        margin: auto;
+        width: 90%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-right: 30px;
+        border-color: rgb(247,148,29);
+        color: rgb(247,148,29);
+        background-color: transparent;
+        border-width: 1px;
+       }
+        
+       #belowcart{
+        /* border: 1px solid black; */
+        width: 60%;
+        height: 75%;
+        margin: auto;
+        margin-top: 20px;
+       }
+      #belowcart>div:first-child{
+        /* border: 1px solid red; */
+        height: 50%;
+       
+      }
+      #belowcart>div:first-child>img{
+        width: 50%;
+        height: 100%;
+        padding-left: 50px;
+      }
+      #belowcart>div:last-child{
+        margin-top:10px;
+      }
+      #belowcart>div:last-child>h2{
+        text-align: center;
+        color: rgb(69,90,100);
+      }
+      #belowcart>div:last-child>h5{
+        text-align: center;
+        color:rgb(69,90,100)
+      }
+      #line{
+        border: 1px solid rgb(247,148,29);
+        width: 100%;
+        margin-top: 20px;
+        /* margin-left:70px ; */
+        margin-right: 70px;
+      }
+
+      
+    </style>
+</head>
+<a href=""></a>
+<body>
+    <div id="heading">
+        <div><a href="nav+home.html"><img src="https://d64lkarmo2mrq.cloudfront.net/baselogo.png" alt="Error"></a></div>
+        <div>
+            <div><a href="https://www.meanbuy.com/in/merchant/signup">Sellers Corner</a>|<a href="https://www.meanbuy.com/in/contact">Feedback</a>|<a href="https://www.meanbuy.com/in/shipping_return">Delivery Info</a></div>
+            <div id="signup">
+                <div><a href="signin.html">LOGIN</a> /<a href="index.html">SIGNUP</a> </div>
+                <div>WELCOME GUEST</div>
+            </div>
+           <div id="cartimage"><img src="https://cdn-icons-png.flaticon.com/512/211/211170.png" alt=""></div>
+        </div>
+    </div>
+    <div id="heading2"><h4>Login / Sign Up |</h4><button><a href ="nav+home.html">Continue Shopping</a></button></div>
+    <div id="line"></div>
+    <div id="container">
+
+        <div>
+            <h3>Login or Create Account</h3>
+
+            <div id="button">
+                <button>Login with Facebook</button>
+                <button>Sign In</button>
+            </div>
+            
+            <form action="">
+                <label>Email Address</label>
+                <input id="email" type="email" placeholder="Email Address">
+                <lebel>Password</lebel>
+                <input id="password" type="password" placeholder="Enter password">
+                <lebel>Confirm password</lebel>
+                <input id="confirmpassword" type="password" placeholder="Password Confirm">  
+                <button>Sign Up</button>
+                <p><a href="signin.html">Already have an Meanbuy Account?Log In!</a></p>
+                <p>By Signing up ,you agree to our</p><p><a href="https://www.meanbuy.com/terms">Terms of Use & Privacy Policy</a></p>
+
+            </form>
+            
+        </div>
+        <div>
+            <div>
+                <div id="cart">Cart Details</div>
+                <div>
+                 <h4>Total Items: 0</h4>
+                 <h4>Sub Total: 0.00</h4>
+                </div>
+                <div>
+                 <h4>Cart Total:₹0.00</h4>
+                 <button>EDIT TOTAL</button>
+                </div>
+            </div>
+            <div id="belowcart">
+                <div><img src="https://www.meanbuy.com/assets/img/india/logo/logo_main.png" alt=""></div>
+                <div>
+                    <h2>Our Shop. Your Price.</h2>
+                    <h5>Feel the power to buy at your price.</h5>
+                    <div id="line"></div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+   let form=document.querySelector("form");
+    let userData=JSON.parse(localStorage.getItem("userData")) || [];
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            email:form.email.value,
+            password:form.password.value,
+            confirmpassword:form.confirmpassword.value,
+        }
+
+        // if (checkPassword(data.confirmpassword)===true){
+        //     alert("Submission Succesful")
+
+        //     window.location.href="signin.html";
+        // }
+        // else{
+        //     alert("Wrong Password enetred")
+        // }
+        if (checkEmails(data.email) === true){
+            if (data.password.length!=0){
+                if (data.password===data.confirmpassword){
+                    alert("Signed up succesfully! Please use the login page to Login!")
+                    userData.push(data);
+                    localStorage.setItem("userData",JSON.stringify(userData));
+                    window.location.href="signin.html";
+                }
+                else{
+                    alert("Wrong passwprd! Please try again")
+                }
+            }
+            else{
+                alert("No password entered! Please enter password");
+            }
+            
+
+        }else{
+            alert("Account Already Exists");
+            window.location.href="signin.html";
+
+        }
+    })
+
+    function checkEmails(email){
+        let filtered=userData.filter(function(element){
+            return email === element.email;
+        })
+        if (filtered.length >0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function checkPassword(password){
+        if (password.length!=0){
+            if (password==confirmpassword){
+                return true;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+
+</script>
