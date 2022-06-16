@@ -378,6 +378,10 @@
             text-decoration: none;
             color: black;
         }
+        #hover:hover{
+            cursor:pointer;
+           
+        }
     </style>
 </head>
 <body>
@@ -549,7 +553,8 @@ let fastMovingArr=[
 ]
     fastMovingArr.forEach(function(elem,index){
         if (index<4){
-            let div1=document.createElement("div");
+            let div1=document.createElement("div")
+            div1.setAttribute("id","hover");
        let img=document.createElement("img");
        img.src=elem.img;
        let p1=document.createElement("p");
@@ -570,6 +575,10 @@ let fastMovingArr=[
        let btnright=document.createElement("buton");
        btnright.classList.add("btnright");
        div1.append(img,p1,p2,hr,div2);
+     div1.addEventListener("click",function(){
+      localStorage.setItem("product",JSON.stringify(elem));
+      window.location.href="pr.html"
+     })  
        document.querySelector("#fastMovingSlide").append(div1);
         }
     })
