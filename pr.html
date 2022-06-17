@@ -310,9 +310,9 @@ margin-left: -800px;
         <p>-25%</p>
         </div>
       <div id="disc2">
-         <h2>Women ZX19 Smart Watch</h2>
+         <h2 id="name">Women ZX19 Smart Watch</h2>
        <div>    
-          <p>4.6/5★</p> 
+          <p id="rating">4.6/5★</p> 
           <p class="under">Write a review</p>
         <div id="img">
           <img class="ii" src="https://cdn.freebiesupply.com/logos/large/2x/facebook-2-logo-png-transparent.png" alt="">
@@ -324,9 +324,9 @@ margin-left: -800px;
         </div>
         </div>
        <div>
-          <h1 style="color:rgb(227, 150, 7);margin-top: -5px;">₹2999.00</h1>
+          <h1 id="price" style="color:rgb(227, 150, 7);margin-top: -5px;">₹2999.00</h1>
           <h2 style="text-decoration:line-through;margin-top:-3px;margin-left:10px;">₹9999.00</h2>
-          <h4 style="color:rgb(115, 203, 115);margin-left:10px;">UP TO 25% OFF</h4>
+          <h4 id="offer" style="color:rgb(115, 203, 115);margin-left:10px;">UP TO 25% OFF</h4>
        </div><br>
        <div id="off">
              (Save this <p style="color:rgb(255, 145, 0);background-color: white;margin-top: 11px;">best deal</p>)
@@ -399,7 +399,14 @@ margin-left: -800px;
     let dataProduct=JSON.parse(localStorage.getItem("product"));
     let img1=document.querySelector("#img1")
     img1.src=dataProduct.img
-     
+     let price=document.querySelector("#price")
+     price.innerText=dataProduct.price
+     let offer=document.querySelector("#offer")
+     offer.innerText=dataProduct.offer
+     let name=document.querySelector("#name")
+     name.innerText=dataProduct.name
+     let rating=document.querySelector("#rating")
+     rating.innerText=dataProduct.rating
     document.querySelector("#a").addEventListener("click", function(){
 document.querySelector("#d").innerHTML= `<p>Product Summary</p>
 <h2>Women ZX19 Smart Wristwatch</h2>
