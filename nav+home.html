@@ -491,7 +491,7 @@
                         <p><a href="index.html">SIGNUP</a></p>
                     </div>
                     <div>
-                        <p>WELCOME GUEST</p>
+                        <p id="Guest">WELCOME GUEST</p>
                     </div>
                 </div>
                  <div>
@@ -1215,4 +1215,15 @@ let fastMovingArr=[
         }
     })
        })
+
+   let userData=JSON.parse(localStorage.getItem("userData")) || [];
+   let userName=[];
+   userName.push(userData)
+   console.log(userName);
+   userData.forEach(function(elem){
+        let p=document.createElement("p");
+        p.innerText=elem.email;
+        document.querySelector("#Guest").innerText=elem.email;
+   })
+       
 </script>

@@ -473,6 +473,7 @@
    let form=document.querySelector("form");
    let userData=JSON.parse(localStorage.getItem("userData")) || [];
 
+
  form.addEventListener("submit", function(event){
     event.preventDefault();
     let data={
@@ -483,6 +484,7 @@
         localStorage.setItem("signinData",JSON.stringify(userData));
         alert("Sign In Successful");
         window.location.href="nav+home.html";
+
 
     }
     else{

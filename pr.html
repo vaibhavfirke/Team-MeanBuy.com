@@ -443,5 +443,16 @@ Select the best price & delivery date and save the most. Have the best price all
 Because we offer the lowest prices we cannot accept returns from Buyer's Remorse. If you're returning because of a faulty product, we'll get to work to get you a replacement product asap or a refund when out of stock.
 * Disclaimer: Although we work very hard to get your order delivered on time, sometimes things happen that are outside of our control so your shipment might get delayed. When this happens you will be informed as soon as possible.`
     })
+
+
+document.querySelector(".but").addEventListener("click",addToCart);
+
+let cartData=JSON.parse(localStorage.getItem("cart-data"))|| [];
+function addToCart(){
+    cartData.push(dataProduct);
+    localStorage.setItem("cart-data",JSON.stringify(cartData));
+    console.log(cartData)
+
+}
 </script>
 </html>

@@ -150,4 +150,6 @@ function display(newarrival) {
     box3.append(box, box2);
     document.querySelector("#main").append(box3);
   });
+
+  
 }

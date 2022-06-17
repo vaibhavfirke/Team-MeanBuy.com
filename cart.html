@@ -144,7 +144,7 @@
        }
        table td,
         table th {
-        border: 1px solid #ddd;
+        border: none;
         padding: 8px;
         text-align: center;
       }
@@ -154,10 +154,20 @@
         text-align: center;
         color: black;
         text-align: center;
+        background-color: rgb(242,242,242);
       }
+     
       table{
         width: 100%;
       }
+      tbody>tr>td{
+            height: 200px;
+            width: auto;
+        }
+        tbody>tr>td>img{
+            width: 100%;
+            height: 100%;
+        }
       /* ------- */
 
       #cart{
@@ -286,6 +296,8 @@
             height:30px;
             color:rgb(113, 110, 110);
         }
+        
+
        
     </style>
 </head>
@@ -313,19 +325,22 @@
                         <th>Product Details</th>
                         <th>Our Price</th>
                         <th>Your Price</th>
+                        <th>Delete</th>
                         
                     </tr>
                 </thead>
+                <tbody id="body"></tbody>
+
             </table>
         </div>
         <div>
             <div id="cart">Cart Details</div>
                 <div>
-                 <h4>Total Items: 0</h4>
+                 <h4>Total Items:<p id="totalItem"></p></h4>
                  <h4>Sub Total: 0.00</h4>
                 </div>
                 <div>
-                 <h4>Cart Total:₹0.00</h4>
+                 <h4>Cart Total:₹<p id="totalPrice"></p></h4>
                  <button>CHECKOUT NOW</button>
                 </div>
         </div>
@@ -385,3 +400,82 @@
         </div>
 </body>
 </html>
+
+<script>
+    let cartData=JSON.parse(localStorage.getItem("cart-data"))||[];
+    console.log(cartData);
+    let total=0;
+    let totalPrice=0;
+    let totalItem=0;
+
+
+
+
+
+
+    
+    function displayTable(){
+        document.getElementById("body").innerHTML="";
+        totalPrice=0;
+        totalItem=0;
+
+        cartData.forEach(function(elem){
+            totalPrice=totalPrice+Number(elem.price.replace(/\D/g, ''));
+            totalItem=totalItem+1;
+            let tr=document.createElement("tr");
+
+
+            let td1=document.createElement("td");
+            let image=document.createElement("img");
+            image.src=elem.img;
+            td1.append(image);
+
+            let td2=document.createElement("td");
+            let p=document.createElement("p");
+            td2.innerText=elem.name;
+            
+            
+
+            let td3=document.createElement("td");
+            td3.innerText="25000"
+
+            let td4=document.createElement("td");
+            td4.innerText=elem.price;
+
+            let td5=document.createElement("td");
+            td5.innerText="REMOVE";
+            td5.style.cursor="pointer";
+            td5.style.backgroundColor="rgb(247,148,29)";
+            td5.style.color="white";
+            td5.addEventListener("click",function(index){
+                Delete(index);
+                document.querySelector("#totalItem").innerText=totalItem;
+                document.querySelector("#totalPrice").innerText=totalPrice;
+            })
+
+            tr.append(td1,td2,td3,td4,td5);
+            document.querySelector("tbody").append(tr);
+            
+
+
+        })
+        console.log(totalPrice)
+        console.log(totalItem)
+        document.querySelector("#totalItem").append(totalItem)
+        document.querySelector("#totalPrice").append(totalPrice)
+
+    }
+
+
+    displayTable(cartData);
+
+
+    function Delete(index){
+      cartData.splice(index,1);
+      localStorage.setItem("cart-data",JSON.stringify(cartData));
+      window.location.reload();
+
+
+    }
+
+</script>
