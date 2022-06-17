@@ -1105,8 +1105,7 @@ let smart-watch[
     {
         img:"https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjIyNTg1L0JsYWNrX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19",
         name:"IP68 Waterproof Wristband",
-        rating:"4.8/5★",
-        price:"₹2,499",
+       
         offer:"UP TO 29% OFF",
         catagory:"smart watches",
         brand:"",
@@ -1122,3 +1121,5 @@ let smart-watch[
         catagory:"smart watches",
         brand:"",
     },
+ rating:"4.8/5★",
+        price:"₹2,499",
